@@ -85,7 +85,7 @@ def eval_arg_parser(interactive: bool = True) -> argparse.Namespace:
     )
     parser.add_argument('--num-fewshot', type=int, default=0, help="Number of fewshots for all tasks.")
     parser.add_argument("--save-dir", type=str, default=".", help="Path to save the lm eval results")
-    return parser.parse_args() if interactive else parser.parse_args('')
+    return parser.parse_args() if interactive else parser.parse_args([])
 
 
 def process_eval_args(args: argparse.Namespace):
